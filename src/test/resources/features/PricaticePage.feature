@@ -14,3 +14,4 @@ Feature: Practice Page Functionality
     And User tries showHide example "show/hide sucessful.."
     And User tries alerts "My name is Selenium"
     And User hovers mouse
+    Then System dispalyes title "Practice Page"

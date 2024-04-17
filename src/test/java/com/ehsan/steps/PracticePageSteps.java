@@ -1,9 +1,12 @@
 package com.ehsan.steps;
 
+import static org.testng.Assert.assertEquals;
+
 import com.ehsan.pages.PracticePage;
 import com.ehsan.utils.Hooks;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class PracticePageSteps extends Hooks {
@@ -76,6 +79,15 @@ public class PracticePageSteps extends Hooks {
 		obj.mouseHover();
 		
 		tearDown();
+	}
+	
+	@Then("System dispalyes title {string}")
+	public void system_dispalyes_title(String string) {
+	   
+		String title = driver.getTitle();
+		
+		System.out.println(title);
+	    
 	}
 
 }
