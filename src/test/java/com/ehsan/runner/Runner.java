@@ -7,7 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/PricaticePage.feature", glue = "com.ehsan.steps", tags = "@SmokeTest")
+@CucumberOptions(features = "src/test/resources/features/PricaticePage.feature", glue = "com.ehsan.steps", tags = "@SmokeTest",
+                plugin = {"pretty", "json:target/cucumber.json"}
+		)
 
 public class Runner {
 
